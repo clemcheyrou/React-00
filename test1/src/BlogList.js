@@ -1,17 +1,12 @@
-const BlogList = ({blog, title}) => {
-
-	const HandleDelete = (id) => {
-		const newBlogs = blog.filter( (blog) => blog.id !== id);
-	}
+const BlogList = ({blogs, title}) => {
 
 	return ( 
 		<div className="bloglist">
 			<h2>{title}</h2>
 			{
-				BlogList.map( (blog) => (
+				blogs.map( (blog) => (
 					<div className="blog" key ={blog.id}>
-						<a href="" className="blog-titre">{blog.title}</a>
-						<button onClick={ HandleDelete(blog.id) }>supprimer article</button>
+						<a href="google.com" className="blog-titre">{blog.title}</a>
 					</div>
 				))
 			}
